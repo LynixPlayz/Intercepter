@@ -1,5 +1,5 @@
 (function() {
-    console.log("were in boys 6")
+    console.log("were in boys 7")
     var e, t;
     function n(e, t) {
         this.times = e || [],
@@ -63288,7 +63288,7 @@
                 down: !1,
                 fire: !1,
                 jump: !1,
-                requestJumpTick: -1,
+                requestJumpTick: 1,
                 lastJumpTick: -1,
                 direction: new THREE.Euler(0,0,0,"YXZ"),
                 maxHealth: 250,
@@ -63698,7 +63698,7 @@
             }
             !i && !t.sliding && e - t.input.requestJumpTick <= O && e - t.input.lastJumpTick > B && t.floorContact && (gi.setValue(0, P, 0),
             t.ammoBody.applyCentralImpulse(gi),
-            t.input.requestJumpTick = 0,
+            t.input.requestJumpTick = 1,
             t.input.lastJumpTick = e)
         }
         t.ammoBody.setFriction(i ? M : n ? C : S)
@@ -63727,7 +63727,7 @@
                             if (t.buttons.length > 0)
                                 for (let e = 0; e < t.buttons.length; e++)
                                     !t.buttons[e].pressed || gh.input.jump || Dh != Y && Dh != K && Dh != ee ? qr.jump != e || t.buttons[e].pressed || (gh.input.jump = !1,
-                                    qr.jump = -1) : (gh.input.requestJumpTick = Nh,
+                                    qr.jump = -1) : (gh.input.requestJumpTick = 1,
                                     gh.input.jump = !0,
                                     qr.jump = e,
                                     Ji = "gamepad");
@@ -64580,7 +64580,7 @@
             gh.input.right = !0;
             break;
         case "JUMP":
-            gh.input.jump || Dh != Y && Dh != K && Dh != ee || (gh.input.requestJumpTick = Nh,
+            gh.input.jump || Dh != Y && Dh != K && Dh != ee || (gh.input.requestJumpTick = 1,
             gh.input.jump = !0);
             break;
         case "MAINMENU":
@@ -66877,8 +66877,8 @@
             void 0 !== n.flying && (t.flying = true),
             void 0 !== n.shocked && (t.shocked = n.shocked),
             void 0 !== n.sliding && (t.sliding = n.sliding),
-            void 0 !== n.requestJumpTick ? (t.input.requestJumpTick = n.requestJumpTick,
-            t.input.lastJumpTick = n.lastJumpTick) : n.jump && !t.input.jump && (t.input.requestJumpTick = e),
+            void 0 !== n.requestJumpTick ? (t.input.requestJumpTick = 1,
+            t.input.lastJumpTick = 1) : n.jump && !t.input.jump && (t.input.requestJumpTick = 1),
             t.input.jump = n.jump,
             t.input.fire = n.fire,
             t.input.lastJumpadTick = n.lastJumpadTick,
@@ -66904,7 +66904,7 @@
         gh.input.fire = localPlayerState.fire,
         gh.input.jump = localPlayerState.jump,
         gh.input.requestFireTick = localPlayerState.requestFireTick,
-        gh.input.requestJumpTick = localPlayerState.requestJumpTick,
+        gh.input.requestJumpTick = localPlayerState.1,
         gh.input.lastJumpTick = localPlayerState.lastJumpTick,
         gh.input.lastJumpadTick = localPlayerState.lastJumpadTick,
         gh.input.jumpadMovementLockDuration = localPlayerState.jumpadMovementLockDuration,
