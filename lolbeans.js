@@ -43871,6 +43871,7 @@
         }
         function Z(e) {
             !1 !== l.enabled && !1 !== l.enablePan && function(e) {
+                console.log(l.keys)
                 var t = !1;
                 switch (e.keyCode) {
                 case l.keys.UP:
