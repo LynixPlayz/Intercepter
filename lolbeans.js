@@ -14,7 +14,7 @@
         this.angleAcceleration = 0,
         this.size = 16,
         this.color = new THREE.Color,
-        this.opacity = 1,
+        this.opacity = 0,
         this.age = 0,
         this.alive = 0
     }
@@ -8895,7 +8895,7 @@
             this.blending = 1,
             this.side = 0,
             this.vertexColors = !1,
-            this.opacity = 1,
+            this.opacity = 0,
             this.transparent = !1,
             this.blendSrc = 204,
             this.blendDst = 205,
@@ -9074,7 +9074,7 @@
                 this.blending = e.blending,
                 this.side = e.side,
                 this.vertexColors = e.vertexColors,
-                this.opacity = e.opacity,
+                this.opacity = 0,
                 this.transparent = e.transparent,
                 this.blendSrc = e.blendSrc,
                 this.blendDst = e.blendDst,
@@ -39148,7 +39148,7 @@
             var t = this.colorTween.lerpHSV(this.age, a);
             this.color.setHSL(t.x, t.y, t.z)
         }
-        this.opacityTween.times.length > 0 && (this.opacity = this.opacityTween.lerp(this.age))
+        this.opacityTween.times.length > 0 && (this.opacity = 0)
     }
     ;
     var r = Object.freeze({
@@ -72298,7 +72298,7 @@
             if (!uc[e].cachedObject) {
                 let t = Xe(i.scene);
                 uc[e].cachedObject = t,
-                void 0 !== uc[e].opacity && (t.material.opacity = uc[e].opacity,
+                void 0 !== uc[e].opacity && (t.material.opacity = 0,
                 t.material.transparent = !0),
                 void 0 !== uc[e].rotation && t.rotation.copy(uc[e].rotation),
                 void 0 !== uc[e].scale && t.scale.copy(uc[e].scale),
@@ -74729,7 +74729,7 @@
                 if (-1 !== nm.indexOf("DevilsTrick")) {
                     var h = Yd.getObjectByName("Spiral").getObjectByName("Floor_MergeMeshes").material;
                     h.transparent = !0,
-                    h.opacity = .6
+                    h.opacity = 0
                 }
                 if (-1 === nm.indexOf("RedLightGreenLight") && -1 === nm.indexOf("NastySeals") || ($d.traverse(e=>{
                     e.name.startsWith("DollHead") ? (Vl.redGreenLightHead = e,
@@ -74745,14 +74745,14 @@
                 -1 !== nm.indexOf("NastySeals")) {
                     let e = eh.getObjectByName("TriggerBeam_ActionSensor_Collider_Box");
                     e && (e.material.transparent = !0,
-                    e.material.opacity = .5),
+                    e.material.opacity = 0),
                     Vl.Trigger_R_Feedback = $d.getObjectByName("Trigger_R_Feedback_Collider_None"),
                     Vl.Trigger_R_Feedback.visible = !1,
                     Vl.Trigger_L_Feedback = $d.getObjectByName("Trigger_L_Feedback_Collider_None"),
                     Vl.Trigger_L_Feedback.visible = !1;
                     let t = $d.getObjectByName("FlippingMarkerA_MergeMeshes_Collider_Compound");
                     t.material.transparent = !0,
-                    t.material.opacity = .5,
+                    t.material.opacity = 0,
                     t.material.blending = THREE.AdditiveBlending
                 }
                 if (-1 !== nm.indexOf("FloorIsLava")) {
