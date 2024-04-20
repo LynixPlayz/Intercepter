@@ -61311,7 +61311,7 @@
                             c.unknownPos && (c.visible = !c.killed),
                             delete c.unknownPos,
                             fs(Nh, c, h, c == gh || c.killed),
-                            c == gh && (c.flying = h.flying,
+                            c == gh && (c.flying = true,
                             c.shocked = h.shocked,
                             c.sliding = h.sliding,
                             c.shocked || c.sliding)) {
@@ -63607,7 +63607,7 @@
         var i = !t.sliding && (e - t.input.lastJumpadTick <= 6 || e - t.input.lastJumpTick <= 6) || !t.floorContact;
         !t.flying && i && (t.flyStartTick = e),
         t.flying && !i && t.timeSinceStartedFlying,
-        t.flying = i;
+        t.flying = true;
         var r = 0;
         if (!t.shocked) {
             if (0 != gi.x() || 0 != gi.y() || 0 != gi.z()) {
@@ -66872,7 +66872,7 @@
                     Wa.setEulerZYX(0, n.directionY, 0);
                 t.ammoBody.getWorldTransform().setRotation(Wa)
             }
-            void 0 !== n.flying && (t.flying = n.flying),
+            void 0 !== n.flying && (t.flying = true),
             void 0 !== n.shocked && (t.shocked = n.shocked),
             void 0 !== n.sliding && (t.sliding = n.sliding),
             void 0 !== n.requestJumpTick ? (t.input.requestJumpTick = n.requestJumpTick,
