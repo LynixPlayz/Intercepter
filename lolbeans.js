@@ -1,5 +1,5 @@
 (function() {
-    console.log("were in boys 4")
+    console.log("were in boys 5")
     var e, t;
     function n(e, t) {
         this.times = e || [],
@@ -61414,6 +61414,7 @@
                 gh.input.jump = !1,
                 gh.input.fire = !1),
                 zu && Au && a == gh || function(e) {
+                    console.log(e.position)
                     for (var t = e.skeleton.bones, i = [], a = 0; a < t.length; a++)
                         -1 === t[a].name.indexOf("Pinky") && -1 === t[a].name.indexOf("Middle") && -1 === t[a].name.indexOf("Ring") && -1 === t[a].name.indexOf("Index") && i.push(t[a]);
                     var s = new THREE.Color(js[e.colorIndex]).getHSL({})
@@ -61438,6 +61439,7 @@
                         emitterDeathAge: 1,
                         emitterStopEmitAge: 1
                     }).setPosition(e.position);
+                    console.log("boys")
                     Ge.addEmitter(u);
                     var p = new THREE.Vector3;
                     for (a = 0; a < i.length; a++)
