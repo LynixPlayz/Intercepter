@@ -66904,7 +66904,7 @@
         gh.input.fire = localPlayerState.fire,
         gh.input.jump = localPlayerState.jump,
         gh.input.requestFireTick = localPlayerState.requestFireTick,
-        gh.input.requestJumpTick = localPlayerState.1,
+        gh.input.requestJumpTick = 1,
         gh.input.lastJumpTick = localPlayerState.lastJumpTick,
         gh.input.lastJumpadTick = localPlayerState.lastJumpadTick,
         gh.input.jumpadMovementLockDuration = localPlayerState.jumpadMovementLockDuration,
