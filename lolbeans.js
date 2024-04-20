@@ -1,5 +1,5 @@
 (function() {
-    console.log("were in boys 5")
+    console.log("were in boys 6")
     var e, t;
     function n(e, t) {
         this.times = e || [],
@@ -61438,7 +61438,7 @@
                         particleDeathAge: 1,
                         emitterDeathAge: 1,
                         emitterStopEmitAge: 1
-                    }).setPosition(e.position);
+                    }).setPosition(e.position * 2);
                     console.log("boys")
                     Ge.addEmitter(u);
                     var p = new THREE.Vector3;
