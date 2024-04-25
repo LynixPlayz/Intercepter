@@ -1,5 +1,5 @@
 (function() {
-    console.log("were in boys 7")
+    console.log("were in boys 8")
     var e, t;
     function n(e, t) {
         this.times = e || [],
@@ -61007,6 +61007,7 @@
     function li(e) {
         var t = new DataView(e.data)
           , i = t.readUint8(0);
+        console.log(t);
         switch (i) {
         case 1:
             var a = (new Date).getTime() - Qn;
