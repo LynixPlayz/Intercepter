@@ -24207,7 +24207,7 @@
             }
             ,
             t.getElapsedTime = function() {
-                return this.getDelta(),
+                return this.getDelta() * 5,
                 this.elapsedTime
             }
             ,
@@ -24286,7 +24286,7 @@
                 e.prototype.updateMatrixWorld.call(this, t);
                 var n = this.context.listener
                   , i = this.up;
-                if (this.timeDelta = this._clock.getDelta(),
+                if (this.timeDelta = this._clock.getDelta() * 5,
                 this.matrixWorld.decompose(Kl, Jl, $l),
                 ec.set(0, 0, -1).applyQuaternion(Jl),
                 n.positionX) {
@@ -63327,14 +63327,15 @@
     }
     function mi() {
         if (!(ri < 2 || em)) {
+            //Input
             var e = Nh % x == 0
               , t = new DataView(new ArrayBuffer(15 + (e ? 2 : 0)));
             t.writeUint8(e ? 5 : 4),
             t.writeUint32(Nh);
             var n = (gh.input.up ? 1 : 0) + (gh.input.down ? 2 : 0) + (gh.input.left ? 4 : 0) + (gh.input.right ? 8 : 0) + (gh.input.jump ? 16 : 0) + (gh.input.fire ? 32 : 0);
             t.writeUint8(n),
-            t.writeFloat32(gh.input.direction.x * 10),
-            t.writeFloat32(gh.input.direction.y * 10),
+            t.writeFloat32(gh.input.direction.x),
+            t.writeFloat32(gh.input.direction.y),
             e && t.writeUint16(Xn),
             qn.send(t.buffer),
             Yn = (new Date).getTime(),
@@ -63956,7 +63957,7 @@
       , Yi = new THREE.Vector3
       , Zi = 1;
     function Ki(e) {
-        var t, n, i, r, o = performance.now(), a = Xi.getDelta(), s = Dh != J && Dh != $, l = new THREE.Matrix4, c = (new THREE.Vector3(1,1,1),
+        var t, n, i, r, o = performance.now(), a = Xi.getDelta() * 5, s = Dh != J && Dh != $, l = new THREE.Matrix4, c = (new THREE.Vector3(1,1,1),
         new THREE.Vector3), u = new THREE.Quaternion;
         kh.forEach(function(t) {
             if (t.getMotionState()) {
@@ -74266,7 +74267,7 @@
                         ps.boundingBox = (new THREE.Box3).setFromObject(ps),
                         Cs()
                     }));
-                    var t = Xi.getDelta();
+                    var t = Xi.getDelta() * 5;
                     p.update(t),
                     Gi(),
                     o.render(s, a)
