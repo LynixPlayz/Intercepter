@@ -1,5 +1,5 @@
 (function() {
-    console.log("were in boys 11")
+    console.log("were in boys 12")
     var e, t;
     function n(e, t) {
         this.times = e || [],
@@ -63345,7 +63345,7 @@
         var t = new DataView(new ArrayBuffer(2));
         t.writeUint8(7),
         t.writeUint8(e ? 0 : 1),
-        qn.send(t.buffer)
+        console.log(t.buffer)
     }
     var yi, gi, _i, vi, bi, xi, wi, Ei = [];
     window.lolbeansSAC = function(e, t) {
@@ -63353,7 +63353,7 @@
         n.writeUint8(99),
         n.writeUint8(e),
         n.writeLongString(t),
-        qn.send(n.buffer)
+        console.log(n.buffer)
     }
     ;
     var Ti, Si, Ci = 0, Mi = !1, ji = !1, zi = 0, Ri = 0, Ai = {
