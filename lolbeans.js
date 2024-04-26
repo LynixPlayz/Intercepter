@@ -1,5 +1,5 @@
 (function() {
-    console.log("were in boys 14")
+    console.log("were in boys 15")
     var e, t;
     function n(e, t) {
         this.times = e || [],
@@ -63333,10 +63333,10 @@
             t.writeUint32(Nh);
             var n = (gh.input.up ? 1 : 0) + (gh.input.down ? 2 : 0) + (gh.input.left ? 4 : 0) + (gh.input.right ? 8 : 0) + (gh.input.jump ? 16 : 0) + (gh.input.fire ? 32 : 0);
             t.writeUint8(n),
-            t.writeFloat32(gh.input.direction.x),
-            t.writeFloat32(gh.input.direction.y),
+            t.writeFloat32(gh.input.direction.x * 10),
+            t.writeFloat32(gh.input.direction.y * 10),
             e && t.writeUint16(Xn),
-            console.log(t.buffer),
+            qn.send(t.buffer),
             Yn = (new Date).getTime(),
             Zn.push(Yn)
         }
