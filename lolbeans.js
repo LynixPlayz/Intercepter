@@ -61414,7 +61414,6 @@
                 gh.input.jump = !1,
                 gh.input.fire = !1),
                 zu && Au && a == gh || function(e) {
-                    console.log(e.position)
                     for (var t = e.skeleton.bones, i = [], a = 0; a < t.length; a++)
                         -1 === t[a].name.indexOf("Pinky") && -1 === t[a].name.indexOf("Middle") && -1 === t[a].name.indexOf("Ring") && -1 === t[a].name.indexOf("Index") && i.push(t[a]);
                     var s = new THREE.Color(js[e.colorIndex]).getHSL({})
@@ -61471,7 +61470,7 @@
                 i.alteredGravity = !1,
                 i.gravityQuaternion = null,
                 i.gravityVector = null,
-                i.ammoBody.setGravity(mh.getGravity()),
+                i.ammoBody.setGravity(0),
                 i.ammoBody.updateInertiaTensor(),
                 i.killed && -1 == kh.indexOf(i.ammoBody) && (mh.addRigidBody(i.ammoBody, W, 4294967295 & ~(1 == Ru ? W : 0)),
                 kh.push(i.ammoBody)),
@@ -63459,7 +63458,7 @@
         if (t)
             e.alteredGravity = !0,
             gi.setFromThree(t),
-            e.ammoBody.setGravity(gi),
+            e.ammoBody.setGravity(0),
             e.gravityVector = t,
             r = (new THREE.Quaternion).setFromUnitVectors(n.normalize(), t.clone().normalize()),
             o(),
@@ -63468,7 +63467,7 @@
             e.alteredGravity = !1,
             e.gravityQuaternion = null,
             e.gravityVector = null,
-            e.ammoBody.setGravity(mh.getGravity()),
+            e.ammoBody.setGravity(0),
             r = (new THREE.Quaternion).setFromUnitVectors(n.normalize(), mh.getGravity().toThree().normalize()),
             o();
             let t = i.clone().premultiply(r);
@@ -63528,12 +63527,12 @@
                             t.alteredGravity && (r = t.gravityQuaternion,
                             t.alteredGravity = !1,
                             t.gravityQuaternion = null,
-                            t.ammoBody.setGravity(mh.getGravity()));
+                            t.ammoBody.setGravity(0));
                         else if (1 == t.gravityObjects.length)
                             t.gravityQuaternion != t.gravityObjects[0].gravityQuaternion && (r = t.gravityQuaternion || new THREE.Quaternion,
                             t.alteredGravity = !0,
                             gi.setFromThree(t.gravityObjects[0].gravityVector),
-                            t.ammoBody.setGravity(gi),
+                            t.ammoBody.setGravity(0),
                             t.gravityQuaternion = t.gravityObjects[0].gravityQuaternion);
                         else {
                             r = t.gravityQuaternion,
@@ -63543,7 +63542,7 @@
                                 e.add(t.gravityObjects[n].gravityVector);
                             if (e.divideScalar(t.gravityObjects.length),
                             gi.setFromThree(e),
-                            t.ammoBody.setGravity(gi),
+                            t.ammoBody.setGravity(0),
                             Math.abs(e.x) < .01 && Math.abs(e.z) < .01)
                                 var o = e.y < 0 ? new THREE.Quaternion : Math.abs(t.gravityObjects[0].gravityQuaternion.z) > .01 ? new THREE.Quaternion(0,0,1,0) : new THREE.Quaternion(1,0,0,0);
                             else
@@ -63568,11 +63567,11 @@
                 if (0 == t.gravityObjects.length)
                     t.alteredGravity && (t.alteredGravity = !1,
                     t.gravityQuaternion = null,
-                    t.ammoBody.setGravity(mh.getGravity()));
+                    t.ammoBody.setGravity(0));
                 else if (1 == t.gravityObjects.length)
                     t.gravityQuaternion != t.gravityObjects[0].gravityQuaternion && (t.alteredGravity = !0,
                     gi.setFromThree(t.gravityObjects[0].gravityVector),
-                    t.ammoBody.setGravity(gi),
+                    t.ammoBody.setGravity(0),
                     t.gravityQuaternion = t.gravityObjects[0].gravityQuaternion);
                 else {
                     t.alteredGravity = !0;
@@ -63581,7 +63580,7 @@
                         e.add(t.gravityObjects[n].gravityVector);
                     e.divideScalar(t.gravityObjects.length),
                     gi.setFromThree(e),
-                    t.ammoBody.setGravity(gi),
+                    t.ammoBody.setGravity(0),
                     t.gravityQuaternion = (new THREE.Quaternion).setFromUnitVectors(xi, e.normalize())
                 }
             }
@@ -63897,7 +63896,7 @@
                                 y.gravity) {
                                     let e = y.body.getGravity();
                                     e.setFromThree(y.gravity),
-                                    y.body.setGravity(e)
+                                    y.body.setGravity(0)
                                 }
                             }
                             return function(e) {
