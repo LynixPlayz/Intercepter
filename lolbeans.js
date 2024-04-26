@@ -63187,7 +63187,7 @@
     function pi() {
         var e = new DataView(new ArrayBuffer(1));
         e.writeUint8(3),
-        qn.send(e.buffer)
+        console.log(e.buffer)
     }
     function di(e) {
         var t = e.readUint32()
@@ -63336,7 +63336,7 @@
             t.writeFloat32(gh.input.direction.x),
             t.writeFloat32(gh.input.direction.y),
             e && t.writeUint16(Xn),
-            qn.send(t.buffer),
+            console.log(t.buffer),
             Yn = (new Date).getTime(),
             Zn.push(Yn)
         }
