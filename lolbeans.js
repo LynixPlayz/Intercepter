@@ -1,5 +1,5 @@
 (function() {
-    console.log("were in boys 10")
+    console.log("were in boys 11")
     var e, t;
     function n(e, t) {
         this.times = e || [],
@@ -39134,14 +39134,14 @@
     }
     ,
     i.prototype.update = function(e) {
-        if (this.position.x += this.velocity.x * e,
-        this.position.y += this.velocity.y * e,
-        this.position.z += this.velocity.z * e,
-        this.velocity.x += this.acceleration.x * e,
-        this.velocity.y += this.acceleration.y * e,
-        this.velocity.z += this.acceleration.z * e,
-        this.angle += this.angleVelocity * e,
-        this.angleVelocity += this.angleAcceleration * e,
+        if (this.position.x += this.velocity.x * e * 10,
+        this.position.y += this.velocity.y * e * 10,
+        this.position.z += this.velocity.z * e * 10,
+        this.velocity.x += this.acceleration.x * e * 10,
+        this.velocity.y += this.acceleration.y * e * 10,
+        this.velocity.z += this.acceleration.z * e * 10,
+        this.angle += this.angleVelocity * e * 10,
+        this.angleVelocity += this.angleAcceleration * e * 10,
         this.age += e,
         this.sizeTween.times.length > 0 && (this.size = this.sizeTween.lerp(this.age)),
         this.colorTween.times.length > 0) {
