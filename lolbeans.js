@@ -61007,7 +61007,6 @@
     function li(e) {
         var t = new DataView(e.data)
           , i = t.readUint8(0);
-        console.log(t);
         switch (i) {
         case 1:
             var a = (new Date).getTime() - Qn;
@@ -61974,6 +61973,7 @@
             break;
         case 48:
             !function(e) {
+                console.log(e)
                 let t = e.readInt32()
                   , n = e.readInt32()
                   , i = e.hasRemaining(4) ? e.readLongString() : ""
