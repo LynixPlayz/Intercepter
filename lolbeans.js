@@ -63187,7 +63187,7 @@
     function pi() {
         var e = new DataView(new ArrayBuffer(1));
         e.writeUint8(3),
-        console.log(e.buffer)
+        qn.send(e.buffer)
     }
     function di(e) {
         var t = e.readUint32()
