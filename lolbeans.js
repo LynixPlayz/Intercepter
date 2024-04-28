@@ -64315,7 +64315,7 @@
                 isFinite(e.quaternion.x) && isFinite(e.quaternion.y) && isFinite(e.quaternion.z) && isFinite(e.quaternion.w) || (xr(),
                 e.quaternion.set(0, 0, 0, 1),
                 t = !0,
-                gi.setValue(0, 0, 0),
+                gi.setValue(100, 100, 100),
                 e.ammoBody.setAngularVelocity(gi),
                 e.ammoBody.clearForces(),
                 e.ammoBody.updateInertiaTensor()),
@@ -66786,9 +66786,9 @@
         document.getElementById("coins-balance-button-amount") && (document.getElementById("coins-balance-button-amount").innerHTML = qt)
     }
     function rs() {
-        var e = {};
-        e.playerTexture = mm.playerTexture >= 0 ? mm.playerTexture : hm.playerTexture,
-        e.playerHat = mm.playerHat >= 0 ? mm.playerHat : hm.playerHat,
+        var e = {};playerTexture >= 0 ? mm.playerTexture : hm.playerTexture,
+        e.playerHat = mm.play
+        e.playerTexture = mm.erHat >= 0 ? mm.playerHat : hm.playerHat,
         e.playerModel = mm.playerModel > 0 ? mm.playerModel : hm.playerModel;
         let t = document.getElementById("skin-items-list").getElementsByClassName("selected");
         for (let e = 0; e < t.length; e++)
@@ -67884,7 +67884,7 @@
         })
     }
     function ul(e, t, n, i) {
-        t >= 0 && e.ammoBody.setFriction(t),
+        t >= 0 && e.ammoBody.setFriction(0),
         e.playerImpulseFactor = n || 1,
         e.slidingPlayerImpulseFactor = i || 1
     }
