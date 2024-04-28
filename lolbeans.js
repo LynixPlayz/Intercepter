@@ -1,5 +1,5 @@
 (function() {
-    console.log("were in boys 16")
+    console.log("were in boys 17")
     var e, t;
     function n(e, t) {
         this.times = e || [],
@@ -61841,15 +61841,20 @@
                         Js(n, t, l, r, o, c, a, s);
                         var e = Ns[t];
                         if (e) {
+                            console.log("Setting silly vars: "),
                             Ga.setFromThree(l),
                             e.ammoBody.getWorldTransform().setOrigin(Ga),
+                            console.log(Ga),
                             Ga.setFromThree(c),
                             e.ammoBody.setLinearVelocity(Ga),
+                            console.log(Ga),
                             Ga.setFromThree(u),
-                            e.ammoBody.setAngularVelocity(Ga);
+                            e.ammoBody.setAngularVelocity(Ga),
+                            console.log(Ga);
                             let t = e.ammoBody.getWorldTransform().getRotation();
                             t.setFromThree((new THREE.Quaternion).setFromEuler(p)),
                             e.ammoBody.getWorldTransform().setRotation(t)
+                            console.log(t)
                         }
                     }
                     ju ? sd(n, s, i) : i()
